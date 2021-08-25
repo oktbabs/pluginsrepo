@@ -8,6 +8,11 @@ pipeline {
                 echo 'Hello World'
             }
         }
+             stage('checkout') {
+            steps {
+                git 'https://github.com/oktbabs/pluginsrepo.git'
+            }
+        }
         stage('install-jenkins-cli') {
             steps {
                 echo 'installing-jenkins-cli'
