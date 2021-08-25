@@ -10,7 +10,7 @@ pipeline {
         }
              stage('checkout') {
             steps {
-                git 'https://github.com/oktbabs/pluginsrepo.git'
+                git pull 'https://github.com/oktbabs/pluginsrepo.git'
             }
         }
         stage('install-jenkins-cli') {
